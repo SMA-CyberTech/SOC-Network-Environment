@@ -23,29 +23,7 @@ An attacker proceeds to run a powershell script in order to steal credentials fr
 
 In this project two virtual machines were utilised for the compromised workstation and the Wazuh services. The workstation used Windows 10 as it's operating system while Wazuh's services ran on an Ubuntu Linux operating system
 
-Brute force attacks generate multiple log events of “failed log in attempts” and Windows logs this in it's Security group as Event ID 4625. This Event ID is crucial when creating an alert on Splunk. A service called Splunk Universal forwarder is installed onto the Windows endpoint pointing to the IP address that is hosting Splunk Enterprise. This service forwards the Security logs which can be viewed on Splunk’s Dashboard on a browser. 
-
-
-<img width="700" height="472" alt="Screenshot 2026-06-27 164319" src="https://github.com/user-attachments/assets/66733f58-b4a4-427c-9687-7ce96a444718" />
-
-*Ref 2: Windows Server Domain*
-
-Before creating an Active Directory environment, Active Directory Domain Services (AD DS) had to be installed and configured. This is so that we could utilise the Domain feature and create users and groups. As seen above, we created a user named Kulle KO. Otsuka and added him to the Tech Team security group. Now we are able to sign into the domain using the credentials that we have associated with Kulle's account. The Windows 10 Client uses this account to sign into the domain "splunklab.local".
-
-<img width="490" height="54" alt="Screenshot 2026-06-19 171537" src="https://github.com/user-attachments/assets/3f947838-3164-449b-8695-923f2cc5ea6b" />
-
-*Ref 3: Splunk Universal Forwarder*
-
-Splunk Enterprise has been installed and configured on an Ubuntu Linux virtual machine. The Splunk Universal forwarder is installed on the Windows 10 client pointing to the IP address of the Linux VM machine.
-
-In order to create a specific index for Splunk to ingest data into, we needed to configure a specific file telling it what to name the index and what data to ingest. The process is to copy the file "C:\Program Files\SplunkUniversalForwarder\etc\system\default\inputs.conf" into "C:\Program Files\SplunkUniversalForwarder\etc\system\local\" if it is not there already.
-
-I have editted the file with notepad and added this line:\
-[WinEventLog://Security]\
-index = ad_logs\
-disabled = false
-
-This tells Splunk Universal Forwarder to forward the Windows Security logs into an index named "ad_logs" that must not be disabled.
+Sysmon is a powerful Windows tool from Microsoft that runs as a service and logs detailed system activity to the Windows Event Log. The reason Sysmon is used is because it provides more in depth telemetry compared to generic Windows logs. The quality of event data is crucial.
 
 
 <img width="419" height="132" alt="Screenshot 2026-06-27 165252" src="https://github.com/user-attachments/assets/fbb35ddd-4151-434a-b536-81ad89677670" />
