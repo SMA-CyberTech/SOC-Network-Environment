@@ -17,7 +17,8 @@ The aim was to simulate credential dumping attacks via Powershell, targetting a 
 
 *Ref 1: Network Diagram*
 
-Three main virtual machines were used; the first VM hosted the Windows Server, the second hosted the Splunk Enterprise Server and the third hosted the Windows 10 client machine which acted as the endpoint. All VM’s are within the same network environment, hence the green square. Essentially, an alert for multiple failed login attempts is triggered and a link to the alert is sent into a preconfigured channel in Slack for investigation. it is important to note that all systems used in this project have been configured with static IP addresses for absolute referencing which helps us avoid potential errors
+An attacker proceeds to run a script\
+In this project two virtual machines were utilised for the compromised workstation and the Wazuh services. The workstation used Windows 10 as it's operating system while Wazuh's services ran on an Ubuntu Linux operating system
 
 Brute force attacks generate multiple log events of “failed log in attempts” and Windows logs this in it's Security group as Event ID 4625. This Event ID is crucial when creating an alert on Splunk. A service called Splunk Universal forwarder is installed onto the Windows endpoint pointing to the IP address that is hosting Splunk Enterprise. This service forwards the Security logs which can be viewed on Splunk’s Dashboard on a browser. 
 
