@@ -35,7 +35,7 @@ Sysmon is a powerful Windows tool from Microsoft that runs as a service and logs
 
 *Ref 3: Atomic Red Framework*
 
-This Splunk prompt tells the dashboard to display Events from the ad_logs index containing Event Code 4625 from the Windows 10 endpoint, where said events appear more than 3 times.
+For this attack to work, the attacker would have to disable the anti-virus software. Atomic Red Team is a collection of tests developed by Red Canary that simulate attacks and malicious behaviour via powershell. The T1059-001 credential dumping test was used on the  Windows 10 endpoint to create an alert in the SIEM for further investigation. Credential dumping is a technique attackers use to steal login information from a compromised OS or memory.
 
 
 <img width="601" height="254" alt="Screenshot 2026-06-27 165239" src="https://github.com/user-attachments/assets/9faaa790-397d-4f82-a7f3-b68e7939cfda" />
