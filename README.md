@@ -23,6 +23,9 @@ An attacker proceeds to run a powershell script in order to steal credentials fr
 
 In this project two virtual machines were utilised for the compromised workstation and the Wazuh services. The workstation used Windows 10 as it's operating system while Wazuh's services ran on an Ubuntu Linux operating system
 
+<img width="660" height="496" alt="Screenshot 2026-06-09 163048" src="https://github.com/user-attachments/assets/4a3fff32-0727-44ff-ade4-3086b3729743" />
+*Ref 2: Sysmon Event Results*
+
 Sysmon is a powerful Windows tool from Microsoft that runs as a service and logs detailed system activity to the Windows Event Log. The reason Sysmon is used is because it provides more in depth telemetry compared to generic Windows logs. The quality of event data is crucial.
 
 
