@@ -24,14 +24,16 @@ An attacker proceeds to run a powershell script in order to steal credentials fr
 In this project two virtual machines were utilised for the compromised workstation and the Wazuh services. The workstation used Windows 10 as it's operating system while Wazuh's services ran on an Ubuntu Linux operating system
 
 <img width="660" height="496" alt="Screenshot 2026-06-09 163048" src="https://github.com/user-attachments/assets/4a3fff32-0727-44ff-ade4-3086b3729743" />
+
 *Ref 2: Sysmon Event Results*
 
 Sysmon is a powerful Windows tool from Microsoft that runs as a service and logs detailed system activity to the Windows Event Log. The reason Sysmon is used is because it provides more in depth telemetry compared to generic Windows logs. The quality of event data is crucial.
 
 
-<img width="419" height="132" alt="Screenshot 2026-06-27 165252" src="https://github.com/user-attachments/assets/fbb35ddd-4151-434a-b536-81ad89677670" />
+<img width="1315" height="510" alt="Screenshot 2026-06-09 161904" src="https://github.com/user-attachments/assets/2d2c3be6-29d5-4c17-b818-35b850bf4bef" />
 
-*Ref 4: SPL Alert Prompt*
+
+*Ref 3: Atomic Red Framework*
 
 This Splunk prompt tells the dashboard to display Events from the ad_logs index containing Event Code 4625 from the Windows 10 endpoint, where said events appear more than 3 times.
 
