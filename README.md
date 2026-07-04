@@ -29,14 +29,14 @@ In this project two virtual machines were utilised for the compromised workstati
 
 Sysmon is a powerful Windows tool from Microsoft that runs as a service and logs detailed system activity to the Windows Event Log. The reason Sysmon is used is because it provides more in depth telemetry compared to generic Windows logs. The quality of event data is crucial.
 
-<img width="1106" height="531" alt="Screenshot 2026-06-09 163341" src="https://github.com/user-attachments/assets/d040c65e-2d4f-4840-af44-d728c28156e9" />
+<img width="622" height="299" alt="Screenshot 2026-06-09 163341" src="https://github.com/user-attachments/assets/d040c65e-2d4f-4840-af44-d728c28156e9" />
 
 *Ref 3: Sysmon Configuration*
 
 Configuration for Sysmon ingestion takes place inside the Windows 10 endpoint's ossec.conf file which can be opened via notepad. Note that administration privileges are required to edit the file. The specific details on what to input into the file can be found in the Sysmon documentation.
 
 
-<img width="1315" height="510" alt="Screenshot 2026-06-09 161904" src="https://github.com/user-attachments/assets/2d2c3be6-29d5-4c17-b818-35b850bf4bef" />
+<img width="739" height="287" alt="Screenshot 2026-06-09 161904" src="https://github.com/user-attachments/assets/2d2c3be6-29d5-4c17-b818-35b850bf4bef" />
 
 
 *Ref 4: Atomic Red Framework*
