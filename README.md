@@ -7,7 +7,7 @@ The aim was to simulate credential dumping attacks via Powershell, targetting a 
 ### Tools Used
 
 - Wazuh, an open source SIEM that has been deployed to monitor our network endpoints.
-- Atomic Red Framework acted as our attack script for credential dumping.
+- Atomic Red Framework acted as our attack script for credential dumping via powershell.
 - Sysmon for detailed log ingestion.
 - Ubuntu Linux is the OS that was used to host the Wazuh services while Windows 10 was used for the workstation.
 
@@ -19,7 +19,7 @@ The aim was to simulate credential dumping attacks via Powershell, targetting a 
 
 *Ref 1: Network Diagram*
 
-An attacker proceeds to run a powershell script in order to steal credentials from a compromised workstation. The workstation has been configuredwith Sysmon, the Sysmon logs are being forwarded to the Wazuh SIEM via the Wazuh agent. A SOC analyst can then log into a browser with credentials for Wazuh and look at the SIEM's dashboard for any suspisious events. Sysmon is able to detect the powershell script process.
+An attacker proceeds to run a powershell script in order to steal credentials from a compromised workstation. The workstation has been configured with Sysmon and the Sysmon logs are being forwarded to the Wazuh SIEM via Wazuh's agent. A SOC analyst can then log into a browser with credentials for Wazuh and look at the SIEM's dashboard for any suspisious events. Sysmon is able to detect the powershell script process.
 
 In this project two virtual machines were utilised for the compromised workstation and the Wazuh services. The workstation used Windows 10 as it's operating system while Wazuh's services ran on an Ubuntu Linux operating system
 
