@@ -13,7 +13,9 @@ The aim was to simulate credential dumping attacks via Powershell, targetting a 
 
 ## Summary
 
-<img width="542" height="344" alt="Diagram" src="https://github.com/user-attachments/assets/a077f298-f61e-4344-8af0-04ac1453115b" />
+<img width="542" height="344" alt="Diagram" src="https://github.com/user-attachments/assets/442ea6aa-471e-4352-bc9e-b1d5b7e18c16" />
+
+
 
 *Ref 1: Network Diagram*
 
