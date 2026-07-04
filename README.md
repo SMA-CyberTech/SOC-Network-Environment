@@ -27,7 +27,7 @@ In this project two virtual machines were utilised for the compromised workstati
 
 *Ref 2: Sysmon Event Results*
 
-Sysmon is a powerful Windows tool from Microsoft that runs as a service and logs detailed system activity to the Windows Event Log. The reason Sysmon is used is because it provides more in depth telemetry compared to generic Windows logs. The quality of event data is crucial.
+Sysmon is a powerful Windows tool from Microsoft that runs as a service and logs detailed system activity to the Windows Event Log. The reason Sysmon is being utilised is because it provides more in depth telemetry compared to generic Windows logs. The quality of event data is crucial.
 
 <img width="622" height="299" alt="Screenshot 2026-06-09 163341" src="https://github.com/user-attachments/assets/d040c65e-2d4f-4840-af44-d728c28156e9" />
 
