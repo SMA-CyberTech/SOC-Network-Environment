@@ -44,11 +44,3 @@ Configuration for Sysmon ingestion takes place inside the Windows 10 endpoint's 
 For this attack to work, the attacker would have to disable the anti-virus software. Atomic Red Team is a collection of tests developed by Red Canary that simulate attacks and malicious behaviour via powershell. The T1059-001 credential dumping test was used on the  Windows 10 endpoint to create an alert in the SIEM for further investigation. Credential dumping is a technique attackers use to steal login information from a compromised OS or memory.
 
 
- 
-
-
-<img width="1365" height="244" alt="Screenshot 2026-06-27 165559" src="https://github.com/user-attachments/assets/37bb981c-f7f7-4587-88c1-a997f320b882" />
-
-*Ref 5: Slack integration with Shuffle*
-
-This is the result of the Splunk --> Shuffle --> Slack integration. Once the link is clicked the user is taken straight to the Splunk dashboard to investigate the triggered alert.
