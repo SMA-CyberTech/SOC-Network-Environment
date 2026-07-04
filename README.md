@@ -29,26 +29,22 @@ In this project two virtual machines were utilised for the compromised workstati
 
 Sysmon is a powerful Windows tool from Microsoft that runs as a service and logs detailed system activity to the Windows Event Log. The reason Sysmon is used is because it provides more in depth telemetry compared to generic Windows logs. The quality of event data is crucial.
 
+<img width="1106" height="531" alt="Screenshot 2026-06-09 163341" src="https://github.com/user-attachments/assets/d040c65e-2d4f-4840-af44-d728c28156e9" />
+
+*Ref 3: Sysmon Configuration*
+
+Configuration for Sysmon ingestion takes place inside the Windows 10 endpoint's ossec.conf file which can be opened via notepad. Note that administration privileges are required to edit the file. The specific details on what to input into the file can be found in the Sysmon documentation.
+
 
 <img width="1315" height="510" alt="Screenshot 2026-06-09 161904" src="https://github.com/user-attachments/assets/2d2c3be6-29d5-4c17-b818-35b850bf4bef" />
 
 
-*Ref 3: Atomic Red Framework*
+*Ref 4: Atomic Red Framework*
 
 For this attack to work, the attacker would have to disable the anti-virus software. Atomic Red Team is a collection of tests developed by Red Canary that simulate attacks and malicious behaviour via powershell. The T1059-001 credential dumping test was used on the  Windows 10 endpoint to create an alert in the SIEM for further investigation. Credential dumping is a technique attackers use to steal login information from a compromised OS or memory.
 
 
-<img width="601" height="254" alt="Screenshot 2026-06-27 165239" src="https://github.com/user-attachments/assets/9faaa790-397d-4f82-a7f3-b68e7939cfda" />
-
-*Ref 4: Alert Settings*
-
-With only the prompt, we would run into too many false positives as we need to add more specificity to the alert. What if someone accidently logged in with the wrong credentials once every week? This is why we have set the alert to trigger when there are 3+ events within the last 5 minutes of the present time (*/5 * * * *).
-
-<img width="716" height="255" alt="Screenshot 2026-07-03 150336" src="https://github.com/user-attachments/assets/9c9c3c70-0257-48a4-b783-4068f49c4140" />
-
-*Ref 5: Slack integration with Shuffle*
-
-As seen in [Ref 4](https://github.com/user-attachments/assets/9faaa790-397d-4f82-a7f3-b68e7939cfda), after the event is triggered we input Shuffle's webhook into the alert so that data can be forwarded to Slack. 
+ 
 
 
 <img width="1365" height="244" alt="Screenshot 2026-06-27 165559" src="https://github.com/user-attachments/assets/37bb981c-f7f7-4587-88c1-a997f320b882" />
