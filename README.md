@@ -6,10 +6,10 @@ The aim was to simulate credential dumping attacks via Powershell, targetting a 
 
 ### Tools Used
 
-- Wazuh, an open source SIEM that has been deployed to monitor our network endpoints
+- Wazuh, an open source SIEM that has been deployed to monitor our network endpoints.
 - Atomic Red Framework acted as our attack script for credential dumping.
-- Windows Server to act as the domain controller within the Active Directory environment.
-- Slack for communication and recieving triggered alerts
+- Sysmon for detailed log ingestion.
+- Ubuntu Linux is the OS that was used to host the Wazuh services.
 
 ## Summary
 
